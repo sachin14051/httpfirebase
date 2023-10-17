@@ -1,0 +1,16 @@
+<div class="card  mt-2" *ngFor="let post of allpost">
+    <div class="card-header">
+        {{post.title}}
+    </div>
+    <div class="card-body">
+        {{post.content}}
+        <br>
+        {{post.name}}
+    </div>
+    <div class="card-footer d-flex justify-content-between">
+        <button class="btn btn-primary" (click)="onEdit(post.name)">edit</button>
+        <button class="btn btn-danger">delete</button>
+
+    </div>
+
+</div>

@@ -1,0 +1,21 @@
+<form [formGroup]="postForm" (ngSubmit)="addForm()">
+  <div class="form-group">
+      <label for="title">title</label>
+      <input type="text" id="title" formControlName="title" class="form-control">
+    </div>
+    <div class="form-group">
+        <label for="content">content</label>
+        <input type="text" id="content" formControlName="content" class="form-control">
+      </div>
+      <div class="form-group">
+        <label for="userId">userId</label>
+        <select formControlName="userId" id="userId" class="form-control">
+            <option [value]="numbsers"  *ngFor="let numbsers of userArray">
+              {{numbsers}}
+            </option>
+        </select>
+      </div>
+      <div class="text-right">
+        <button class="btn btn-primary">submit</button>
+      </div>
+</form>
